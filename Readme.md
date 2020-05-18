@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Мария Нестерова](https://up.htmlacademy.ru/htmlcss/28/user/970963).
-* Наставник: [Игорь Бабушкин].(https://htmlacademy.ru/profile/id185816)
+* Наставник: [Игорь Бабушкин](https://htmlacademy.ru/profile/id185816)
 
 ---
 
