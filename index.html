@@ -22,7 +22,7 @@
     <main>
       <h1>Дизайн-студия Нёрдс</h1>
       <section>
-        <h2>Наши принципы</h2>
+        <h2 class="visually-hidden">Наши принципы</h2>
         <ul>
           <li>
             <p>Долго, дорого, скрупулезно.</p>
@@ -56,7 +56,7 @@
         </ul>
       </section>
       <section>
-        <h2>Услуги</h2>
+        <h2 class="visually-hidden">Услуги</h2>
         <ul>
           <li>
             <img src="img/web-sites.png" width="300" height="146" alt="Веб-сайты">
@@ -79,7 +79,8 @@
         </ul>
       </section>
       <section>
-        <h2>О студии</h2>
+        <h2 class="visually-hidden">О студии</h2>
+        <p>Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
         <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
         <h3>Выполняем заказы на разработку:</h3>
         <ul>
@@ -111,7 +112,7 @@
         </ul>
       </section>
       <section>
-        <h2>Партнеры</h2>
+        <h2 class="visually-hidden">Партнеры</h2>
         <ul>
           <li>
             <a href="https://htmlacademy.ru/intensive/htmlcss">
@@ -119,13 +120,19 @@
             </a>
           </li>
           <li>
+             <a href="#">
             <img src="img/barbershop.png" width="209" height="90" alt="Барбершоп Бородинский">
+            </a>
           </li>
           <li>
+            <a href="#">
             <img src="img/pink.png" width="185" height="52" alt="Пинк">
+            </a>
           </li>
           <li>
+            <a href="#">
             <img src="img/mishka.png" width="173" height="84" alt="Мишка">
+            </a>
           </li>
         </ul>
       </section>
@@ -145,26 +152,45 @@
       <ul>
         <li>
           <a href="#">
-          <span>Вконтакте</span>
+          <span class="visually-hidden">Вконтакте</span>
           <img src="img/vk-icon.svg" width="26.01" height="15" alt=" Вконтакте">
           </a>
         </li>
         <li>
           <a href="#">
-          <span>Фейсбук</span>
+          <span class="visually-hidden">Фейсбук</span>
           <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">
         </a>
         </li>
         <li>
           <a href="#">
-          <span>Инстаграм</span>
+          <span class="visually-hidden">Инстаграм</span>
           <img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">
         </a>
       </li>
       </ul>
 
     </footer>
+    <section>
+      <h2>Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="name">Ваше имя:</label>
+          <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="login-login">Логин:</label>
+          <input id="login-login" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="email-text">Текст письма:</label>
+          <textarea id="email-text" name="text" placeholder="В свободной форме"></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
 
+      <button type="button">Закрыть</button>
+    </section>
 
   </body>
 </html>
