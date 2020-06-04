@@ -3,24 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Нёрдс</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<header>
-  <nav>
-    <a>
-      <img src="img/nerds-logo.svg" width="159.87" height="65.02" alt=" Логотип Нёрдс">
+<header class="main-header">
+  <nav class="main-navigation">
+    <a class="main-navigation-logo" href="index.html">
+      <img src="img/nerds-logo.svg" width="160" height="65" alt=" Логотип Нёрдс">
     </a>
-    <ul>
+    <ul class="main-navigation-list">
       <li><a href="#">Студия</a></li>
       <li><a href="#">Клиенты</a></li>
       <li><a href="inner.html">Магазин</a></li>
       <li><a href="#">Контакты</a></li>
     </ul>
-    <a href="#">Корзина</a>
+    <a class="site-basket" href="#">Корзина</a>
   </nav>
-</header>
-<main>
   <h1>Магазин готовых шаблонов</h1>
+</header>
+<main class="container">
   <section>
     <h2 class="visually-hidden">Фильтры</h2>
     <form action="https://echo.htmlacademy.ru" method="get">
@@ -40,7 +43,7 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset>
+      <fieldset class="grid-form">
         <legend>Сетка:</legend>
         <ul>
           <li>
@@ -57,7 +60,7 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset>
+      <fieldset class="features-form">
         <legend>Особенности:</legend>
         <ul>
           <li>
@@ -82,7 +85,7 @@
           </li>
         </ul>
       </fieldset>
-      <button type="submit">Показать</button>
+      <button class="form-submit" type="submit">Показать</button>
     </form>
   </section>
   <section>
@@ -99,55 +102,66 @@
         <a href="#">По названию</a>
       </li>
     </ul>
-
-    <ul>
+    <ul class="catalog-template">
       <li>
-        <a>
-          <img src="img/img-sedona.jpg" width="360" height="576" alt="Седона">
-        </a>
-        <h3>Sedona</h3>
-        <p>Информационный сайт для туристов</p>
-        <a href="#">9 900 ₽</a>
+          <a href="#">
+            <img src="img/img-sedona.jpg" width="360" height="576" alt="Седона">
+            <div class="description-card">
+            <h3>Sedona</h3>
+            <p>Информационный сайт для туристов</p>
+            <span>9 900 ₽</span>
+            </div>
+          </a>
       </li>
       <li>
-        <a>
-          <img src="img/img-pink.jpg" width="358" height="576" alt="Пинк">
-        </a>
-        <h3>Pink App</h3>
-        <p>Продуктовый лендинг приложения для iOS и Android</p>
-        <a href="#">9 900 ₽</a>
+          <a href="#">
+            <img src="img/img-pink.jpg" width="358" height="576" alt="Пинк">
+              <div class="description-card">
+              <h3>Pink App</h3>
+              <p>Продуктовый лендинг приложения для iOS и Android</p>
+              <span>9 900 ₽</span>
+              </div>
+          </a>
       </li>
       <li>
-        <a>
-          <img src="img/img-barbershop.jpg" width="358" height="578" alt="Барбершоп Бородинский">
-        </a>
-        <h3>Barbershop</h3>
-        <p>Сайт салона красоты. Для мужчин, да.</p>
-        <a href="#">9 900 ₽</a>
+          <a href="#">
+            <img src="img/img-barbershop.jpg" width="358" height="578" alt="Барбершоп Бородинский">
+              <div class="description-card">
+                <h3>Barbershop</h3>
+                <p>Сайт салона красоты. Для мужчин, да.</p>
+                <span>9 900 ₽</span>
+              </div>
+          </a>
       </li>
       <li>
-        <a>
-          <img src="img/img-mishka.jpg" width="358" height="578" alt="Мишка">
+        <a href="#">
+            <img src="img/img-mishka.jpg" width="358" height="578" alt="Мишка">
+              <div class="description-card">
+                <h3>MISHKA</h3>
+                <p>Интернет-магазин вязаных игрушек</p>
+                <span>9 900 ₽</span>
+              </div>
         </a>
-        <h3>MISHKA</h3>
-        <p>Интернет-магазин вязаных игрушек</p>
-        <a href="#">9 900 ₽</a>
       </li>
       <li>
-        <a>
-          <img src="img/img-aplus.jpg" width="358" height="578" alt="А+">
+        <a href="#">
+            <img src="img/img-aplus.jpg" width="358" height="578" alt="А+">
+            <div class="description-card">
+              <h3>A Plus</h3>
+              <p>Лендинг курсов повышения квалификации</p>
+              <span>9 900 ₽</span>
+            </div>
         </a>
-        <h3>A Plus</h3>
-        <p>Лендинг курсов повышения квалификации</p>
-        <a href="#">9 900 ₽</a>
       </li>
       <li>
-        <a>
-          <img src="img/img-kvast.jpg" width="358" height="578" alt="Кваст">
+        <a href="#">
+            <img src="img/img-kvast.jpg" width="358" height="578" alt="Кваст">
+            <div class="description-card">
+              <h3>КВАСТ</h3>
+              <p>Промо-сайт производителя крафтового кваса</p>
+              <span>9 900 ₽</span>
+            </div>
         </a>
-        <h3>КВАСТ</h3>
-        <p>Промо-сайт производителя крафтового кваса</p>
-        <a href="#">9 900 ₽</a>
       </li>
     </ul>
     <ul>
@@ -176,10 +190,12 @@
 
 
 </main>
-<footer>
+<footer class="main-footer">
+  <div class="discount">
   <h2>Давайте дружить, это выгодно!</h2>
   <p>Скидка 10% для друзей из социальных сетей.</p>
-  <ul>
+  </div>
+  <ul class="footer-social">
     <li>
       <a href="#">
         <span class="visually-hidden">Вконтакте</span>

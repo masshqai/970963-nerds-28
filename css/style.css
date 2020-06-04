@@ -1,0 +1,234 @@
+:root{
+  --black: #000000;
+  --basic-pink: #fb565a;
+  --hover-pink: #e74246;
+  --active-pink: #d7373b;
+  --basic-green: #00ca74;
+  --hover-green: #00bc6c;
+  --active-green: #00aa62;
+  --basic-yellow: #efc849;
+  --hover-yellow: #eab534;
+  --active-yellow: #e5a722;
+  --white: #ffffff;
+  --basic-grey: #eeeeee;
+  --dark-grey: #283136;
+  --social-grey: #e1e1e1;
+  --filter-grey:#4d4d4d;
+  --icon-grey: #a6a6a6;
+  --card-grey: #666666;
+}
+
+body {
+  min-width: 1440px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--dark-grey);
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*Шапка*/
+.main-header{
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--black);
+  font-weight: 500;
+  background-color: var(--basic-grey);
+}
+
+.main-navigation-list{
+  list-style: none;
+}
+
+.main-navigation a,
+.site-basket a{
+  color: var(--black);
+}
+
+.main-navigation a:hover,
+.site-basket a:hover,
+.main-navigation a:focus,
+.site-basket a:focus{
+  color: var(--basic-pink);
+}
+
+.main-navigation a:active,
+.site-basket a:active{
+  opacity: 0.3;
+  color: var(--black);
+}
+
+/*Услуги*/
+.products-list{
+  list-style: none;
+}
+
+.products-item h3{
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--black);
+  font-weight: 700;
+}
+
+.products-item p{
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.products-item a{
+  color: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.web-sites-button{
+  background-color: var(--basic-pink);
+}
+
+.web-sites-button:hover,
+.web-sites-button:focus{
+  background-color: var(--hover-pink);
+}
+
+.web-sites-button:active{
+  background-color: var(--active-pink);
+  /*доделать прозрачность текста*/
+}
+
+.apps-button{
+  background-color: var(--basic-green);
+}
+
+.apps-button:hover,
+.apps-button:focus{
+  background-color: var(--hover-green);
+}
+
+.apps-button:active{
+  background-color: var(--active-green);
+  /*доделать прозрачность текста*/
+}
+
+.presentations-button{
+  background-color: var(--basic-yellow);
+}
+
+.presentations-button:hover,
+.presentations-button:focus{
+  background-color: var(--hover-yellow);
+}
+
+.presentations-button:active{
+  background-color: var(--active-yellow);
+  /*доделать прозрачность текста*/
+}
+/*Футер*/
+.main-footer h2{
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.main-footer p{
+  line-height: 22px;
+}
+
+.footer-social{
+  list-style: none;
+}
+
+.footer-social a{
+  background-color: var(--social-grey); /*градиент???*/
+  }
+
+.footer-social a:hover,
+.footer-social a:focus{
+background-color: var(--hover-pink);
+}
+
+.footer-social a:active{
+  background-color: var(--active-pink);
+  /*прозрачность иконки*/
+}
+
+.modal-window {
+  display: none;
+}
+/*Заголовок на странице каталога*/
+
+.main-header h1{
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--black);
+  text-align: center;
+  text-transform: none;
+  vertical-align: middle;
+}
+
+.grid-form,
+.features-form{
+  line-height: 19px;
+}
+.grid-form ul,
+.features-form ul{
+  list-style: none;
+}/*добавить стили для формы:наведение и заблокирован*/
+
+.form-submit{
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--basic-grey);
+  border-radius: 3px;
+
+}
+
+.catalog-template{
+  list-style: none;
+}
+
+.description-card{
+background-color: var(--basic-grey);
+  width: 360px;
+}
+
+.description-card h3{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.description-card p{
+  line-height: 18px;
+  text-align: center;
+  color: var(--card-grey);
+}
+
+.description-card span{
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 18px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--basic-pink);
+  /*сдвинуть в центр*/
+}
