@@ -16,7 +16,7 @@
     <ul class="main-navigation-list">
       <li><a href="#">Студия</a></li>
       <li><a href="#">Клиенты</a></li>
-      <li><a href="inner.html">Магазин</a></li>
+      <li  class="navigation-list-current"><a href="inner.html">Магазин</a></li>
       <li><a href="#">Контакты</a></li>
     </ul>
     <a class="site-basket" href="#">Корзина</a>
@@ -27,8 +27,8 @@
   <section>
     <h2 class="visually-hidden">Фильтры</h2>
     <form action="https://echo.htmlacademy.ru" method="get">
-      <fieldset>
-        <legend>Стоимость:</legend>
+      <fieldset class="price-form">
+        <legend class="heading-form">Стоимость:</legend>
         <div> <!--поле бегунка-->
           <div></div><!--кнопка от-->
           <div></div><!--шкала-->
@@ -44,7 +44,7 @@
         </ul>
       </fieldset>
       <fieldset class="grid-form">
-        <legend>Сетка:</legend>
+        <legend class="heading-form">Сетка:</legend>
         <ul>
           <li>
             <input type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
@@ -61,7 +61,7 @@
         </ul>
       </fieldset>
       <fieldset class="features-form">
-        <legend>Особенности:</legend>
+        <legend class="heading-form">Особенности:</legend>
         <ul>
           <li>
             <input type="checkbox" name="slider" id="filter-slider" checked>
@@ -88,17 +88,17 @@
       <button class="form-submit" type="submit">Показать</button>
     </form>
   </section>
-  <section>
+  <section class="template">
     <h2 class="visually-hidden">Шаблоны</h2>
-    <p>Сортировать:</p>
-    <ul>
-      <li>
+    <p class="heading-form">Сортировать:</p>
+    <ul class="sorting-menu">
+      <li class="sorting-item sorting-item-current">
         <a href="#">По цене</a>
       </li>
-      <li>
+      <li class="sorting-item">
         <a href="#">По типу</a>
       </li>
-      <li>
+      <li class="sorting-item">
         <a href="#">По названию</a>
       </li>
     </ul>
@@ -164,26 +164,28 @@
         </a>
       </li>
     </ul>
-    <ul>
-      <li>
+    <ul class="pagination-list">
+      <li class="pagination-item pagination-item-current">
         <a>1</a>
       </li>
-      <li>
+      <li class="pagination-item">
         <a href="#">2</a>
       </li>
-      <li>
+      <li class="pagination-item">
         <a href="#">3</a>
       </li>
-      <li>
+      <li class="pagination-item">
         <a href="#">Следующая</a>
       </li>
     </ul>
   </section>
-  <section>
-    <h2>NЁRDS DESIGN STUDIO</h2>
-    <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
-    <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-    <a href="#">Напишите нам</a>
+  <section class="map-navigation">
+    <div class="map-adress">
+      <h2>NЁRDS DESIGN STUDIO</h2>
+      <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+      <a class="number-phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+      <a class="write-button" href="#">Напишите нам</a>
+    </div>
     <img src="img/map.png" width="1440" height="416" alt="Карта">
     <img src="img/map-marker.png" width="231" height="190" alt="Маркер">
   </section>
@@ -216,7 +218,7 @@
     </li>
   </ul>
 </footer>
-<section>
+<section class="modal-window">
   <h2>Напишите нам</h2>
   <form action="https://echo.htmlacademy.ru" method="post">
     <p>

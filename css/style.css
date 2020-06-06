@@ -16,6 +16,7 @@
   --filter-grey: #4d4d4d;
   --icon-grey: #a6a6a6;
   --card-grey: #666666;
+  --border-grey: #dbdbdb;
 }
 
 body {
@@ -63,11 +64,38 @@ img {
 .site-basket a:focus {
   color: var(--basic-pink);
 }
+/*маркер:находимся на странице- правильно ли так стилизовать?*/
+.navigation-list-current a {
+  border-bottom: 2px solid var(--basic-pink);
+  padding-bottom: 13px;
+}
 
 .main-navigation a:active,
 .site-basket a:active {
   opacity: 0.3;
   color: var(--black);
+}
+
+/*Секция со слайдером*/
+.information-list {
+  list-style: none;
+}
+
+.information-slogan {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--black);
+}
+
+.learn-button {
+  color: var(--white);
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--basic-pink);
+  border-radius: 3px;
 }
 
 /*Услуги*/
@@ -137,11 +165,83 @@ img {
   /*доделать прозрачность текста*/
 }
 
+/*О студии*/
+.description-slogan {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.description ul {
+  list-style: none;
+}
+
+.description h3 {
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.heading-table {
+  color: var(--black);
+}
+
+/*Партнеры*/
+.partners ul {
+  list-style: none;
+}
+
+.partners a {
+  opacity: 0.2;
+}
+
+.partners a:hover {
+  opacity: 1;
+}
+
+.partners a:active {
+ opacity: 0.1;
+}
+/*Карта*/
+.map-adress {
+  width: 319px;
+  height: 308px;
+  }
+
+.map-adress h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--black);
+  }
+
+.map-adress p,
+.number-phone {
+  color: var(--card-grey);
+  line-height: 18px;
+}
+
+.write-button {
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--basic-pink);
+  border-radius: 3px;
+}
 /*Футер*/
 .main-footer h2 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 36px;
   line-height: 36px;
+}
+.description-table span {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--black);
 }
 
 .main-footer p {
@@ -181,6 +281,18 @@ img {
   text-transform: none;
   vertical-align: middle;
 }
+/*Формы*/
+.heading-form {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.price-form ul {
+  list-style: none;
+ }
 
 .grid-form,
 .features-form {
@@ -203,6 +315,29 @@ img {
   border-radius: 3px;
 
 }
+.sorting-menu {
+  list-style: none;
+}
+
+.sorting-item a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  opacity: 0.3;
+  color: var(--black);
+}
+.sorting-item a:hover {
+  opacity: 0.6;
+}
+
+.sorting-item a:active {
+  opacity: 1;
+  color: var(--black);
+}
+.sorting-item-current a {
+  opacity: 1;
+  color: var(--black);
+}
 
 .catalog-template {
   list-style: none;
@@ -214,7 +349,7 @@ img {
 }
 
 .description-card h3 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 30px;
   text-align: center;
@@ -236,4 +371,21 @@ img {
   color: var(--white);
   background-color: var(--basic-pink);
   /*сдвинуть в центр*/
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  line-height: 18px;
+  text-align: center;
+  color: var(--black);
+  background-color: var(--basic-grey);
+  border-radius: 3px;
+}
+
+.pagination-item-current a {
+  background-color: var(--white);
+  border: 3px solid var(--border-grey);
 }
