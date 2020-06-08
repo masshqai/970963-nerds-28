@@ -39,6 +39,34 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.container {
+  width: 1157px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 /*Шапка*/
 .main-header {
   font-size: 16px;
@@ -47,6 +75,44 @@ img {
   color: var(--black);
   font-weight: 500;
   background-color: var(--basic-grey);
+  margin-bottom: 78px;
+}
+
+.main-navigation-logo {
+  width: 160px;
+  height: 65px;
+  margin-right: 203px;
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-navigation-wrapper {
+  width: 100%;
+}
+
+.main-navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 440px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-navigation-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-navigation {
+max-width: 160px;
+}
+
+.user-navigation .site-basket {
+  padding-left: 50px;
 }
 
 .main-navigation-list {
@@ -64,8 +130,8 @@ img {
 .site-basket a:focus {
   color: var(--basic-pink);
 }
-/*маркер:находимся на странице- правильно ли так стилизовать?*/
-.navigation-list-current a {
+
+.active-menu {
   border-bottom: 2px solid var(--basic-pink);
   padding-bottom: 13px;
 }
@@ -99,8 +165,14 @@ img {
 }
 
 /*Услуги*/
+
 .products-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 100px;
+  margin: 0;
+  padding: 0;
 }
 
 .products-item h3 {
@@ -232,6 +304,17 @@ img {
   border-radius: 3px;
 }
 /*Футер*/
+.main-footer {
+  padding: 68px 0;
+  }
+
+.main-footer .container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: center;
+  column-gap: 139px;
+
+}
 .main-footer h2 {
   font-weight: 700;
   font-size: 36px;
@@ -244,16 +327,29 @@ img {
   color: var(--black);
 }
 
-.main-footer p {
+.discount h2 {
+  margin-bottom: 10px;
+}
+
+.discount p {
   line-height: 22px;
 }
 
 .footer-social {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
-.footer-social a {
+.social-item {
   background-color: var(--social-grey); /*градиент???*/
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin-right: 9px;
 }
 
 .footer-social a:hover,
@@ -281,13 +377,34 @@ img {
   text-transform: none;
   vertical-align: middle;
 }
+.page-catalog {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-content: start;
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+}
 /*Формы*/
+
 .heading-form {
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
   color: var(--black);
+}
+
+.heading-form li {
+  margin-bottom: 24px;
+}
+
+.grid-form .heading-form,
+.features-form .heading-form{
+  margin-bottom: 16px;
+}
+
+.price-form {
+  border-style: none;
 }
 
 .price-form ul {
@@ -297,14 +414,23 @@ img {
 .grid-form,
 .features-form {
   line-height: 19px;
+  border: none;
+}
+
+.grid-form {
+  margin-bottom: 46px;
+}
+
+.features-form {
+  margin-bottom: 50px;
 }
 
 .grid-form ul,
 .features-form ul {
   list-style: none;
-}
-
-/*добавить стили для формы:наведение и заблокирован*/
+  margin: 0;
+  padding: 0;
+  }  /*добавить стили для формы:наведение и заблокирован*/
 
 .form-submit {
   font-weight: 500;
@@ -313,6 +439,10 @@ img {
   text-transform: uppercase;
   background-color: var(--basic-grey);
   border-radius: 3px;
+  width: 260px;
+  height: 50px;
+  border: none
+;
 
 }
 .sorting-menu {
@@ -339,13 +469,35 @@ img {
   color: var(--black);
 }
 
-.catalog-template {
-  list-style: none;
+.template {
+  margin-left: 140px;
 }
 
+.catalog-template {
+  list-style: none;
+  margin: 0 0 55px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 360px 360px;
+  column-gap: 41px;
+  row-gap: 70px;
+  }
+
+.catalog-item {
+  position: relative;
+
+}
+.catalog-item:hover .description-card{
+  display: block;
+}
 .description-card {
   background-color: var(--basic-grey);
   width: 360px;
+  height: 231px;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .description-card h3 {
@@ -355,22 +507,26 @@ img {
   text-align: center;
   color: var(--black);
   text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .description-card p {
   line-height: 18px;
   text-align: center;
   color: var(--card-grey);
+  margin-bottom: 32px;
 }
 
-.description-card span {
+.description-card .price-card {
   font-weight: 500;
   text-transform: uppercase;
   line-height: 18px;
   text-align: center;
   color: var(--white);
   background-color: var(--basic-pink);
-  /*сдвинуть в центр*/
+  padding: 17px 72px 15px;
+  margin: 32px 80px 44px;
+
 }
 
 .pagination-list {

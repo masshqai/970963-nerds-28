@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
@@ -7,22 +7,29 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page-body">
     <header class="main-header">
     <nav class="main-navigation">
-      <a class="main-navigation-logo" href="index.html">
-        <img src="img/nerds-logo.svg" width="160" height="65" alt=" Логотип Нёрдс">
-      </a>
-      <ul class="main-navigation-list">
-        <li><a href="#">Студия</a></li>
-        <li><a href="#">Клиенты</a></li>
-        <li><a href="inner.html">Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-      <a class="site-basket" href="#">Корзина</a>
+      <div class="main-navigation-wrapper">
+        <div class="container">
+          <a class="main-navigation-logo" href="index.html">
+            <img src="img/nerds-logo.svg" width="160" height="65" alt=" Логотип Нёрдс">
+          </a>
+          <ul class="main-navigation-list">
+            <li><a class="navigation-list-item" href="#">Студия</a></li>
+            <li><a class="navigation-list-item" href="#">Клиенты</a></li>
+            <li><a class="navigation-list-item" href="inner.html">Магазин</a></li>
+            <li><a class="navigation-list-item" href="#">Контакты</a></li>
+          </ul>
+          <div class="user-navigation">
+            <a class="site-basket" href="#">Корзина</a>
+          </div>
+        </div>
+      </div>
     </nav>
     </header>
-    <main class="container">
+    <main>
+      <div class="container">
       <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
       <section class="information">
         <h2 class="visually-hidden">Наши принципы</h2>
@@ -114,31 +121,32 @@
           </li>
         </ul>
       </section>
-      <section class="partners">
-        <h2 class="visually-hidden">Партнеры</h2>
-        <ul>
-          <li>
-            <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/html.academy.png" width="199" height="68" alt="HTML Academy">
-            </a>
-          </li>
-          <li>
-             <a href="#">
-            <img src="img/barbershop.png" width="209" height="90" alt="Барбершоп Бородинский">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-            <img src="img/pink.png" width="185" height="52" alt="Пинк">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-            <img src="img/mishka.png" width="173" height="84" alt="Мишка">
-            </a>
-          </li>
-        </ul>
-      </section>
+        <section class="partners">
+          <h2 class="visually-hidden">Партнеры</h2>
+          <ul>
+            <li>
+              <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img src="img/html.academy.png" width="199" height="68" alt="HTML Academy">
+              </a>
+            </li>
+            <li>
+               <a href="#">
+              <img src="img/barbershop.png" width="209" height="90" alt="Барбершоп Бородинский">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+              <img src="img/pink.png" width="185" height="52" alt="Пинк">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+              <img src="img/mishka.png" width="173" height="84" alt="Мишка">
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
       <section class="map-navigation">
         <div class="map-adress">
           <h2>NЁRDS DESIGN STUDIO</h2>
@@ -152,31 +160,32 @@
 
     </main>
     <footer class="main-footer">
-      <div class="discount">
-        <h2>Давайте дружить, это выгодно!</h2>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
-      </div>
-      <ul class="footer-social">
-        <li>
-          <a href="#">
-          <span class="visually-hidden">Вконтакте</span>
-          <img src="img/vk-icon.svg" width="26" height="15" alt=" Вконтакте">
+      <div class="container">
+        <ul class="footer-social">
+          <li>
+            <a class="social-item" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+            <img src="img/vk-icon.svg" width="26" height="15" alt=" Вконтакте">
+            </a>
+          </li>
+          <li>
+            <a class="social-item" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+            <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">
+          </a>
+          </li>
+          <li>
+            <a class="social-item" href="#">
+            <span class="visually-hidden">Инстаграм</span>
+            <img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">
           </a>
         </li>
-        <li>
-          <a href="#">
-          <span class="visually-hidden">Фейсбук</span>
-          <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">
-        </a>
-        </li>
-        <li>
-          <a href="#">
-          <span class="visually-hidden">Инстаграм</span>
-          <img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">
-        </a>
-      </li>
-      </ul>
-
+        </ul>
+        <div class="discount">
+          <h2>Давайте дружить, это выгодно!</h2>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </div>
     </footer>
     <section class="modal-window">
       <h2>Напишите нам</h2>
