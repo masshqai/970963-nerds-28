@@ -75,7 +75,7 @@ img {
   color: var(--black);
   font-weight: 500;
   background-color: var(--basic-grey);
-  margin-bottom: 78px;
+  padding-bottom: 78px;
 }
 
 .main-navigation-logo {
@@ -108,7 +108,7 @@ img {
 }
 
 .user-navigation {
-max-width: 160px;
+  max-width: 160px;
 }
 
 .user-navigation .site-basket {
@@ -143,8 +143,21 @@ max-width: 160px;
 }
 
 /*Секция со слайдером*/
+
+.information {
+  background-color: var(--basic-grey);
+  margin-bottom: 176px;
+}
+
+.slider-wrapper {
+  display: flex;
+  width: 538px;
+}
+
 .information-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .information-slogan {
@@ -152,6 +165,13 @@ max-width: 160px;
   font-size: 55px;
   line-height: 55px;
   color: var(--black);
+  margin: 0;
+  padding-bottom: 27px;
+}
+
+.information-description {
+  margin: 0;
+  padding-bottom: 37px;
 }
 
 .learn-button {
@@ -164,7 +184,25 @@ max-width: 160px;
   border-radius: 3px;
 }
 
+.information-button {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 88px;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
 /*Услуги*/
+.products {
+  margin-bottom: 155px;
+}
 
 .products-list {
   list-style: none;
@@ -238,29 +276,71 @@ max-width: 160px;
 }
 
 /*О студии*/
+.description {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  column-gap: 149px;
+  margin-bottom: 121px;
+}
+
 .description-slogan {
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
+  margin: 0;
+  margin-bottom: 32px;
 }
 
-.description ul {
+.description-views {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.description-item {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+}
+
+.description-item li {
+  margin-bottom: 39px;
 }
 
 .description h3 {
   font-weight: 700;
   line-height: 24px;
   text-transform: uppercase;
+  margin-bottom: 31px;
 }
 
 .heading-table {
   color: var(--black);
 }
 
+.description-table img {
+  width: 360px;
+  height: 208px;
+  margin-bottom: 37px;
+}
+
+.description-table-item {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /*Партнеры*/
 .partners ul {
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 126px;
 }
 
 .partners a {
@@ -272,21 +352,25 @@ max-width: 160px;
 }
 
 .partners a:active {
- opacity: 0.1;
+  opacity: 0.1;
 }
+
 /*Карта*/
 .map-adress {
+  text-align: center;
+  outline: 5px solid #ff0000; /*временная обводка*/
   width: 319px;
-  height: 308px;
-  }
+}
 
 .map-adress h2 {
+  margin: 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
   color: var(--black);
-  }
+  padding-top: 49px;
+}
 
 .map-adress p,
 .number-phone {
@@ -295,6 +379,7 @@ max-width: 160px;
 }
 
 .write-button {
+  display: inline-block;
   line-height: 18px;
   font-weight: 500;
   text-align: center;
@@ -302,11 +387,16 @@ max-width: 160px;
   color: var(--white);
   background-color: var(--basic-pink);
   border-radius: 3px;
+  width: 219px;
+  height: 50px;
+  margin-bottom: 47px;
+  margin-top: 38px;
 }
+
 /*Футер*/
 .main-footer {
   padding: 68px 0;
-  }
+}
 
 .main-footer .container {
   display: grid;
@@ -315,11 +405,13 @@ max-width: 160px;
   column-gap: 139px;
 
 }
+
 .main-footer h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
 }
+
 .description-table span {
   font-weight: 700;
   font-size: 45px;
@@ -377,13 +469,14 @@ max-width: 160px;
   text-transform: none;
   vertical-align: middle;
 }
+
 .page-catalog {
   display: grid;
   grid-template-columns: 260px 1fr;
   align-content: start;
-  outline-offset: -5px;
-  outline: 5px solid rgba(255, 0, 0, 0.7);
+
 }
+
 /*Формы*/
 
 .heading-form {
@@ -399,7 +492,7 @@ max-width: 160px;
 }
 
 .grid-form .heading-form,
-.features-form .heading-form{
+.features-form .heading-form {
   margin-bottom: 16px;
 }
 
@@ -409,7 +502,7 @@ max-width: 160px;
 
 .price-form ul {
   list-style: none;
- }
+}
 
 .grid-form,
 .features-form {
@@ -430,7 +523,9 @@ max-width: 160px;
   list-style: none;
   margin: 0;
   padding: 0;
-  }  /*добавить стили для формы:наведение и заблокирован*/
+}
+
+/*добавить стили для формы:наведение и заблокирован*/
 
 .form-submit {
   font-weight: 500;
@@ -441,12 +536,24 @@ max-width: 160px;
   border-radius: 3px;
   width: 260px;
   height: 50px;
-  border: none
-;
+  border: none;
 
 }
+
+.sorting-wrapper {
+  display: flex;
+  width: 760px;
+  justify-content: space-between;
+}
+
 .sorting-menu {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 272px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 88px;
 }
 
 .sorting-item a {
@@ -456,6 +563,7 @@ max-width: 160px;
   opacity: 0.3;
   color: var(--black);
 }
+
 .sorting-item a:hover {
   opacity: 0.6;
 }
@@ -464,6 +572,7 @@ max-width: 160px;
   opacity: 1;
   color: var(--black);
 }
+
 .sorting-item-current a {
   opacity: 1;
   color: var(--black);
@@ -481,15 +590,17 @@ max-width: 160px;
   grid-template-columns: 360px 360px;
   column-gap: 41px;
   row-gap: 70px;
-  }
+}
 
 .catalog-item {
   position: relative;
 
 }
-.catalog-item:hover .description-card{
+
+.catalog-item:hover .description-card {
   display: block;
 }
+
 .description-card {
   background-color: var(--basic-grey);
   width: 360px;
