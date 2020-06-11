@@ -8,7 +8,7 @@
 </head>
 <body class="page-body">
 <header class="main-header">
-  <nav class="main-navigation">
+  <nav class="main-navigation" container>
     <div class="main-navigation-wrapper">
       <div class="container">
         <a class="main-navigation-logo" href="index.html">
@@ -20,46 +20,51 @@
           <li><a class="navigation-list-item active-menu" href="inner.html">Магазин</a></li>
           <li><a class="navigation-list-item" href="#">Контакты</a></li>
         </ul>
-        <a class="site-basket" href="#">Корзина</a>
+        <div class="user-navigation">
+          <a class="site-basket" href="#">Корзина</a>
+        </div>
       </div>
     </div>
   </nav>
-  <h1>Магазин готовых шаблонов</h1>
 </header>
 <main>
+  <h1 class="main-catalog-title">Магазин готовых шаблонов</h1>
   <div class="page-catalog container">
-    <section>
+    <section class="filters">
       <h2 class="visually-hidden">Фильтры</h2>
       <form class="form-container" action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="price-form">
           <legend class="heading-form">Стоимость:</legend>
-          <div> <!--поле бегунка-->
-            <div></div><!--кнопка от-->
-            <div></div><!--шкала-->
-            <div></div><!--кнопка до-->
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="width: 30%;margin-left: 20%"></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="left: 20%"></div>
+              <div class="toggle toggle-max" tabindex="0" style="left: 50%"></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">ОТ<input type="number" name="min" placeholder="0"></label>
+              <label class="max-price">ДО<input type="number" name="max" placeholder="15000"></label>
+            </div>
           </div>
-          <ul>
-            <li>
-              <label>ОТ<input type="number" name="min" placeholder="0"></label>
-            </li>
-            <li>
-              <label>ДО<input type="number" name="max" placeholder="15000"></label>
-            </li>
-          </ul>
         </fieldset>
         <fieldset class="grid-form">
           <legend class="heading-form">Сетка:</legend>
           <ul>
-            <li>
-              <input type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-radio" type="radio" name="grid" value="adaptive"
+                     id="filter-adaptive" checked>
               <label for="filter-adaptive">Адаптивная</label>
             </li>
-            <li>
-              <input type="radio" name="grid" value="fixed" id="filter-fixed">
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-radio" type="radio" name="grid" value="fixed"
+                     id="filter-fixed">
               <label for="filter-fixed">Фиксированная</label>
             </li>
-            <li>
-              <input type="radio" name="grid" value="rubber" id="filter-rubber">
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-radio" type="radio" name="grid" value="rubber"
+                     id="filter-rubber">
               <label for="filter-rubber">Резиновая</label>
             </li>
           </ul>
@@ -67,24 +72,26 @@
         <fieldset class="features-form">
           <legend class="heading-form">Особенности:</legend>
           <ul>
-            <li>
-              <input type="checkbox" name="slider" id="filter-slider" checked>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="slider" id="filter-slider"
+                     checked>
               <label for="filter-slider">Слайдер</label>
             </li>
-            <li>
-              <input type="checkbox" name="advantages" id="filter-advantages">
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="advantages"
+                     id="filter-advantages">
               <label for="filter-advantages">Блок преимуществ</label>
             </li>
-            <li>
-              <input type="checkbox" name="news" id="filter-news" checked>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
               <label for="filter-news">Новости</label>
             </li>
-            <li>
-              <input type="checkbox" name="gallery" id="filter-gallery">
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="gallery" id="filter-gallery">
               <label for="filter-gallery">Галерея</label>
             </li>
-            <li>
-              <input type="checkbox" name="basket" id="filter-basket">
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="basket" id="filter-basket">
               <label for="filter-basket">Корзина</label>
             </li>
           </ul>
@@ -197,33 +204,33 @@
     <img src="img/map-marker.png" width="231" height="190" alt="Маркер">
   </section>
 </main>
-<footer class="main-footer">
-  <div class="container">
-    <ul class="footer-social">
-      <li>
-        <a class="social-item" href="#">
-          <span class="visually-hidden">Вконтакте</span>
-          <img src="img/vk-icon.svg" width="26.01" height="15" alt=" Вконтакте">
-        </a>
-      </li>
-      <li>
-        <a class="social-item" href="#">
-          <span class="visually-hidden">Фейсбук</span>
-          <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">
-        </a>
-      </li>
-      <li>
-        <a class="social-item" href="#">
-          <span class="visually-hidden">Инстаграм</span>
-          <img src="img/insta-icon.svg" width="21" height="21" alt=" Инстаграм">
-        </a>
-      </li>
-    </ul>
-    <div class="discount">
-      <h2>Давайте дружить, это выгодно!</h2>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
-    </div>
+<footer class="main-footer container">
+
+  <ul class="footer-social">
+    <li>
+      <a class="social-item vk-item" href="#">
+        <span class="visually-hidden">Вконтакте</span>
+        <img src="img/vk-icon.svg" width="26.01" height="15" alt=" Вконтакте">
+      </a>
+    </li>
+    <li>
+      <a class="social-item fb-item" href="#">
+        <span class="visually-hidden">Фейсбук</span>
+        <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">
+      </a>
+    </li>
+    <li>
+      <a class="social-item insta-item" href="#">
+        <span class="visually-hidden">Инстаграм</span>
+        <img src="img/insta-icon.svg" width="21" height="21" alt=" Инстаграм">
+      </a>
+    </li>
+  </ul>
+  <div class="discount">
+    <h2>Давайте дружить, это выгодно!</h2>
+    <p>Скидка 10% для друзей из социальных сетей.</p>
   </div>
+
 </footer>
 <section class="modal-window">
   <h2>Напишите нам</h2>

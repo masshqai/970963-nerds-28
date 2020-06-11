@@ -10,6 +10,7 @@
   --hover-yellow: #eab534;
   --active-yellow: #e5a722;
   --white: #ffffff;
+  --white-opacity: rgba(255, 255, 255, 0.3);
   --basic-grey: #eeeeee;
   --dark-grey: #283136;
   --social-grey: #e1e1e1;
@@ -17,6 +18,8 @@
   --icon-grey: #a6a6a6;
   --card-grey: #666666;
   --border-grey: #dbdbdb;
+  --btn-hover-grey: #dfdfdf;
+  --btn-active-grey: #d5d5d5;
 }
 
 @font-face {
@@ -89,7 +92,7 @@ img {
 }
 
 .container {
-  width: 1157px;
+  width: 1160px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -109,6 +112,8 @@ img {
   width: 160px;
   height: 65px;
   margin-right: 203px;
+  display: block;
+  padding-top: 49px;
 }
 
 .main-navigation {
@@ -129,24 +134,26 @@ img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-right: 245px;
 }
 
 .main-navigation-wrapper .container {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .user-navigation {
   max-width: 160px;
 }
 
-.user-navigation .site-basket {
-  padding-left: 50px;
-}
-
 .main-navigation-list {
   list-style: none;
+}
+
+.navigation-list-item,
+.site-basket {
+  display: block;
+  padding-bottom: 9px;
+  padding-top: 75px;
 }
 
 .main-navigation a,
@@ -170,6 +177,23 @@ img {
 .site-basket a:active {
   opacity: 0.3;
   color: var(--black);
+}
+
+.user-navigation .site-basket {
+  position: relative;
+  padding-left: 40px;
+}
+
+.user-navigation .site-basket::before {
+  content: "";
+  position: absolute;
+  top: 82px;
+  left: 4px;
+  width: 21px;
+  height: 15px;
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /*Секция со слайдером*/
@@ -239,10 +263,12 @@ img {
 .products-list {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 300px 300px 1fr;
   column-gap: 100px;
   margin: 0;
   padding: 0;
+  border-bottom: 2px solid var(--basic-grey);
+  padding-bottom: 80px;
 }
 
 .products-item h3 {
@@ -251,11 +277,15 @@ img {
   text-transform: uppercase;
   color: var(--black);
   font-weight: 700;
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 .products-item p {
   font-size: 16px;
   line-height: 24px;
+  margin: 0;
+  margin-bottom: 32px;
 }
 
 .products-item a {
@@ -263,6 +293,17 @@ img {
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
+}
+
+.products-item img {
+  width: 300px;
+  height: 146px;
+  margin-bottom: 25px;
+}
+
+.products-button {
+  display: inline-block;
+  padding: 15px 39px;
 }
 
 .web-sites-button {
@@ -276,7 +317,8 @@ img {
 
 .web-sites-button:active {
   background-color: var(--active-pink);
-  /*доделать прозрачность текста*/
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: var(--white-opacity);
 }
 
 .apps-button {
@@ -290,7 +332,8 @@ img {
 
 .apps-button:active {
   background-color: var(--active-green);
-  /*доделать прозрачность текста*/
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: var(--white-opacity);
 }
 
 .presentations-button {
@@ -304,7 +347,8 @@ img {
 
 .presentations-button:active {
   background-color: var(--active-yellow);
-  /*доделать прозрачность текста*/
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: var(--white-opacity);
 }
 
 /*О студии*/
@@ -365,6 +409,13 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.description-table span {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--black);
 }
 
 /*Партнеры*/
@@ -433,33 +484,28 @@ img {
   padding: 68px 0;
 }
 
-.main-footer .container {
+.main-footer {
   display: grid;
   grid-template-columns: 260px 1fr;
+  column-gap: 140px;
   align-items: center;
-  column-gap: 139px;
-
 }
 
 .main-footer h2 {
+  margin: 0;
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
 }
 
-.description-table span {
-  font-weight: 700;
-  font-size: 45px;
-  line-height: 64px;
-  color: var(--black);
-}
-
 .discount h2 {
+  margin: 0;
   margin-bottom: 10px;
 }
 
 .discount p {
   line-height: 22px;
+  margin: 0;
 }
 
 .footer-social {
@@ -467,18 +513,21 @@ img {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .social-item {
-  background-color: var(--social-grey); /*градиент???*/
-  width: 80px;
-  height: 80px;
+  background-color: var(--social-grey);
+  width: 78px;
+  height: 78px;
   border-radius: 50%;
-  display: block;
+  display: inline-block;
   margin-right: 9px;
 }
+
+.insta-item {
+  margin-right: 0;
+} /*насколько верно так делать?иначе иконки не входят в строку*/
 
 .footer-social a:hover,
 .footer-social a:focus {
@@ -487,7 +536,23 @@ img {
 
 .footer-social a:active {
   background-color: var(--active-pink);
-  /*прозрачность иконки*/
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.vk-item img {
+  padding: 33px 27px;
+}
+
+.fb-item img {
+  padding: 30px 33px 26px 33px;
+}
+
+.insta-item img {
+  padding: 30px;
+}
+
+.social-item img:active {
+  opacity: 0.3;
 }
 
 .modal-window {
@@ -496,7 +561,7 @@ img {
 
 /*Заголовок на странице каталога*/
 
-.main-header h1 {
+.main-catalog-title {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
@@ -504,16 +569,110 @@ img {
   text-align: center;
   text-transform: none;
   vertical-align: middle;
+  margin: 0;
+  padding-bottom: 117px;
+  background-color: var(--basic-grey);
 }
 
 .page-catalog {
   display: grid;
   grid-template-columns: 260px 1fr;
   align-content: start;
-
+  margin-top: 59px;
 }
 
 /*Формы*/
+.filters {
+  width: 260px;
+}
+
+.form-container fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 54px;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+  font-family: inherit;
+  font-size: inherit;
+}
 
 .heading-form {
   font-size: 18px;
@@ -523,27 +682,9 @@ img {
   color: var(--black);
 }
 
-.heading-form li {
-  margin-bottom: 24px;
-}
-
-.grid-form .heading-form,
-.features-form .heading-form {
-  margin-bottom: 16px;
-}
-
-.price-form {
-  border-style: none;
-}
-
-.price-form ul {
-  list-style: none;
-}
-
 .grid-form,
 .features-form {
   line-height: 19px;
-  border: none;
 }
 
 .grid-form {
@@ -561,7 +702,80 @@ img {
   padding: 0;
 }
 
-/*добавить стили для формы:наведение и заблокирован*/
+.grid-form .heading-form,
+.features-form .heading-form {
+  margin-bottom: 16px;
+}
+
+.filter-option {
+  margin-bottom: 29px;
+  padding-left: 35px;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-option label:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: -35px;
+  top: 0;
+  width: 23px;
+  height: 23px;
+  opacity: 0.4;
+}
+
+.filter-input-checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: -35px;
+  top: 0;
+  width: 26px;
+  height: 23px;
+  opacity: 0.4;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: -35px;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  opacity: 0.4;
+}
+
+.filter-input-radio:checked + label::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: -35px;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  opacity: 0.4;
+}
+
 
 .form-submit {
   font-weight: 500;
@@ -573,9 +787,20 @@ img {
   width: 260px;
   height: 50px;
   border: none;
-
 }
 
+.form-submit:hover,
+.form-submit:focus {
+  background-color: var(--btn-hover-grey);
+}
+
+.form-submit:active {
+  background-color: var(--btn-active-grey);
+}/*как добавить прозрачность текста при нажатии у кнопки?*/
+
+
+
+/*Сортировать*/
 .sorting-wrapper {
   display: flex;
   width: 760px;
@@ -632,7 +857,10 @@ img {
 
 .catalog-item {
   position: relative;
+}
 
+.catalog-item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .catalog-item:hover .description-card {
@@ -647,6 +875,18 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.catalog-item::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 40px;
+  background-image: url("../img/browser.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  /*Не выходит верно спозиционировать*/
+
 }
 
 .description-card h3 {
