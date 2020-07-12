@@ -199,7 +199,7 @@ img {
   left: 2px;
   width: 21px;
   height: 15px;
-  background-image: url("../img/cart-icon.svg");
+  background-image: url(../img/cart-icon.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -290,6 +290,7 @@ img {
   border-radius: 3px;
   display: inline-block;
   padding: 16px 55px;
+  vertical-align: center;
 }
 
 .learn-button:hover,
@@ -396,6 +397,7 @@ img {
   display: inline-block;
   padding: 13px 40px;
   border-radius: 3px;
+  vertical-align: center;
 }
 
 .web-sites-button {
@@ -667,6 +669,7 @@ img {
   margin-bottom: 47px;
   margin-top: 33px;
   margin-left: 50px;
+  vertical-align: center;
 }
 
 .write-button:hover,
@@ -725,6 +728,7 @@ img {
   border-radius: 50%;
   display: inline-block;
   margin-left: 12px;
+  vertical-align: center;
 }
 
 .social-item:nth-of-type {
